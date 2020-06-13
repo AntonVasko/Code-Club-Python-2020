@@ -1,0 +1,18 @@
+#!python3
+from random import randint
+player = input("Камінь (к), ножниці (н) или папір(п)?")
+choice = randint(1, 3)
+if choice == 1:
+  computer = 'к'
+elif choice == 2:
+  computer = 'п'
+elif choice == 3:
+  computer = 'н'
+print(player, "vs", computer)
+
+if player == computer:
+  print("Ничья!!!")
+elif player == 'к' and computer == 'н':
+  print("Перемога за Вами!")
+elif player == 'к' and computer == 'п':
+  print("Комп'ютер переміг :(")
